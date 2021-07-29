@@ -1,0 +1,136 @@
+@import "variables";
+@import "mixins";
+
+.debating {
+    background: $primary-clr;
+    color: $white-clr;
+    padding: 4rem 2rem;
+    margin-bottom: 2.5rem;
+    .debating--container {
+        @include flex(column, center, flex-start);
+        max-width: 1000px;
+        margin: 0 auto;
+        .debate--item {
+            padding: 3rem 1rem;
+            max-width: 800px;
+            position: relative;
+        }
+        .debate--evenings {
+            margin-bottom: 3rem;
+        }
+        .img {
+            margin: 1rem;
+            z-index: 2;
+            position: relative;
+        }
+        .debate--title {
+            color: $white-clr;
+            text-transform: capitalize;
+            font-size: 1.6rem;
+
+            &::selection {
+                background: $text-clr;
+                color: $primary-clr;
+            }
+        }
+        .debate--text {
+            font-size: 0.8rem;
+            color: $text-clr;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+
+            &::selection {
+                background: $text-clr;
+                color: $primary-clr;
+            }
+        }
+        .debate--btn {
+            font-size: 1.15rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 530px) {
+    .debating {
+        .debate--evenings {
+            .img {
+                float: left;
+            }
+            .debate--btn {
+                margin-left: 10vh;
+            }
+        }
+        .debate--membership {
+            align-self: flex-end;
+            .img {
+                float: right;
+            }
+        }
+        .img {
+            shape-outside: circle(50%);
+            max-width: 45%;
+        }
+        .debate--title {
+            color: $white-clr;
+            text-transform: capitalize;
+            font-size: 1.6rem;
+        }
+        .debate--text {
+            font-size: 0.8rem;
+            color: $text-clr;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .debating {
+        margin-top: 6rem;
+        margin-bottom: 5rem;
+        padding: 0px 2rem 1rem !important;
+        .debate--item {
+            @include flex(row, center, flex-start);
+            .img {
+                flex: 1.3;
+                filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.25));
+                margin: 0 2rem;
+            }
+            .debate--content {
+                flex: 1;
+            }
+            .debate--content {
+                .debate--btn {
+                    margin: 0;
+                }
+            }
+        }
+        .debate--membership {
+            padding: 0 1rem !important;
+            .img {
+                order: 1;
+            }
+        }
+        .debate--evenings {
+            margin-bottom: 0px !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 830px) {
+    .debating {
+        padding-bottom: 0;
+
+        .debate--evenings {
+            padding-bottom: 0 !important;
+            .img {
+                transform: translateY(-30%);
+            }
+        }
+        .debate--membership {
+            .img {
+                transform: translateY(30%);
+            }
+        }
+    }
+}

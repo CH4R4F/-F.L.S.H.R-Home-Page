@@ -1,0 +1,52 @@
+@mixin fixed($top, $right, $bottom, $left) {
+    position: fixed;
+    @if $top != null {
+        top: $top;
+    }
+    @if $right != null {
+        right: $right;
+    }
+    @if $bottom != null {
+        bottom: $bottom;
+    }
+    @if $left != null {
+        left: $left;
+    }
+}
+
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin absoluteLeft {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin absolutTop {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin flex($dir, $justify, $align) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin background($url) {
+    background: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin circleDim($width, $max-width) {
+    width: $width;
+    height: $width;
+    max-width: $max-width;
+    max-height: $max-width;
+}

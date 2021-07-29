@@ -1,0 +1,120 @@
+@import "variables";
+@import "mixins";
+
+.hero--wrapper {
+    @include background("../images/heroBackground.png");
+    padding-bottom: 9rem;
+}
+.social-media-icons {
+    display: none;
+}
+.hero {
+    padding: 1rem;
+    .content {
+        h1::selection,
+        p::selection {
+            background: $primary-clr;
+            color: $text-clr;
+        }
+    }
+}
+.hero--content {
+    width: 100%;
+    @include flex(row, center, flex-start);
+
+    .logo {
+        flex: 1;
+    }
+    .content {
+        flex: 1.5;
+        align-self: center;
+        margin-top: 2rem;
+        .hero--title {
+            color: $primary-clr;
+            font-weight: 600;
+            line-height: 1.3;
+            font-size: 1.2rem;
+            margin-bottom: 0.7em;
+        }
+        .hero--subtitle {
+            font-size: 12px;
+            line-height: 1.4;
+            color: $secondary-clr;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        .hero--btn {
+            box-shadow: 0 3px 9px rgba($color: #000000, $alpha: 0.3);
+            font-size: 1rem;
+        }
+    }
+}
+
+.dottes {
+    display: block;
+    @include absoluteLeft;
+    bottom: -100px;
+    opacity: 0.7;
+    z-index: $behind;
+    width: 20vw;
+    max-width: 400px;
+    min-width: 100px;
+}
+/* in case there is a fucking screen with width < 250px */
+@media only screen and (max-width: 250px) {
+    .hero--content {
+        @include flex(column, center, flex-start);
+
+        .content {
+            margin-top: 0px;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .hero--title {
+        font-size: 1.4rem !important;
+    }
+    .hero--subtitle {
+        font-size: 0.7rem !important;
+    }
+    .hero--btn {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .hero--title {
+        font-size: 1.9rem !important;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .hero--title {
+        font-size: 2.2rem !important;
+        font-weight: bold;
+    }
+    .hero--subtitle {
+        font-size: 1rem !important;
+        max-width: 70%;
+    }
+    .hero--btn {
+        font-size: 1rem !important;
+    }
+    .social-media-icons {
+        display: block;
+        background: $white-clr;
+        top: 4rem;
+        right: 0;
+        padding: 0.5rem;
+        border-radius: 20px 0px 0px 20px;
+        a {
+            display: block;
+            img {
+                max-width: 25px;
+            }
+        }
+        a + a {
+            margin-top: 10px;
+        }
+    }
+}

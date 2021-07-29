@@ -1,0 +1,157 @@
+@import "variables";
+@import "mixins";
+@import "resets";
+*:focus:not(input):not(textarea) {
+    border: none;
+    outline: none;
+}
+
+html {
+    font-family: $text-font;
+}
+body {
+    overscroll-behavior-y: contain;
+    overflow-x: hidden;
+}
+section {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+section:not(.hero) {
+    padding: 3rem 0.5rem;
+}
+a {
+    color: $primary-clr;
+}
+.absolute {
+    position: absolute;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $important-font;
+}
+
+.btn {
+    padding: 0.5em 1em;
+    border-radius: 3rem;
+    color: $primary-clr;
+    background: $white-clr;
+    cursor: pointer;
+    display: block;
+}
+.section--title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: $primary-clr;
+    margin-bottom: 1em;
+    text-transform: capitalize;
+}
+main {
+    overflow: hidden;
+}
+img,
+button,
+span {
+    user-select: none;
+}
+
+.fancy__circles {
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid $circles-clr;
+    z-index: $behind;
+}
+.hero--c-1 {
+    @include circleDim(40vw, 300px);
+    transform: translate(-50%, 100%);
+    left: 0;
+    bottom: 0;
+}
+.hero--c-2 {
+    @include circleDim(30vw, 250px);
+    transform: translate(50%, 100%);
+    right: 0;
+    bottom: 0;
+}
+.debate--c-1 {
+    @include circleDim(20vw, 200px);
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+}
+.debate--c-2 {
+    @include circleDim(30vw, 250px);
+    transform: translate(40%, -70%);
+    top: 0;
+    right: 0;
+}
+.d--eve--c-1 {
+    @include circleDim(20vw, 80px);
+    transform: translate(20%, 50%);
+    top: 0;
+    left: 0;
+}
+.d--eve--c-2 {
+    @include circleDim(30vw, 200px);
+    transform: translate(-10%, 0%);
+    bottom: 0;
+    left: 0;
+}
+
+.d--mem--c-1 {
+    @include circleDim(20vw, 200px);
+    transform: translate(20%, -20%);
+    top: 0;
+    right: 0;
+}
+.d--mem--c-2 {
+    @include circleDim(20vw, 50px);
+    transform: translate(160%, -40%);
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.quote--c-1 {
+    @include circleDim(20vw, 250px);
+    transform: translate(50%, -40%);
+    top: 0;
+    right: 0;
+}
+.quote--c-2 {
+    @include circleDim(20vw, 300px);
+    transform: translate(30%, 40%);
+    bottom: 0;
+    left: 0;
+}
+.join--c-1 {
+    width: 50px;
+    height: 50px;
+    left: 10vw;
+    top: 10vw;
+}
+.join--c-2 {
+    width: 35px;
+    height: 35px;
+    right: 15vw;
+    top: 20vw;
+}
+@media only screen and (min-width: 650px) {
+    .section--title {
+        font-size: 1.7rem;
+    }
+}
+
+@import "header";
+@import "hero";
+@import "about";
+@import "debate";
+@import "quotes";
+@import "join";
+@import "footer";
+@import "join_form";

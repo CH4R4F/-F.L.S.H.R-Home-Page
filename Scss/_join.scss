@@ -1,0 +1,58 @@
+@import "variables";
+@import "mixins";
+
+.join {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    &--top {
+        text-align: center;
+        transform: translateY(10%);
+        position: relative;
+        z-index: $behind;
+
+        img {
+            max-width: 900px;
+            width: 100%;
+        }
+    }
+    &--bottom {
+        background: $primary-clr;
+        color: $white-clr;
+        padding: 2rem;
+        .ready-to-debate {
+            @include flex(column, center, center);
+            gap: 2rem;
+
+            .join--title {
+                font-weight: bold;
+            }
+
+            .discord {
+                white-space: nowrap;
+                font-size: 0.8rem !important;
+                img,
+                span {
+                    vertical-align: middle;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 475px) {
+    .ready-to-debate {
+        @include flex(row !important, center, center);
+    }
+}
+@media only screen and (min-width: 600px) {
+    .join--title {
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .join--title {
+        font-size: 1.8rem;
+    }
+}

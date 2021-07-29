@@ -1,0 +1,72 @@
+@import "variables";
+@import "mixins";
+
+#quote {
+    position: relative;
+    background: rgb(220, 228, 255);
+    background: linear-gradient(180deg, rgba(236, 240, 253, 0) 0%, rgba(236, 240, 253, 0.53) 14.32%, #ecf0fd 45.83%, rgba(236, 240, 253, 0.43) 84.33%, rgba(236, 240, 253, 0) 100%);
+    .quote--wrapper {
+        max-width: 500px;
+        margin: 0 auto;
+        .quote--container {
+            background: $white-clr;
+            min-height: 300px;
+            @include flex(column, center, flex-start);
+            padding: 1.5rem;
+            border-radius: 30px;
+            position: relative;
+
+            &::after {
+                content: url(../images/q.png);
+                position: absolute;
+                opacity: 0.5;
+                top: 1rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .quote--text {
+                color: $text-clr;
+                z-index: 2;
+                margin-bottom: 1rem;
+                display: block;
+                text-align: center;
+                line-height: 1.2;
+            }
+
+            .author {
+                color: $primary-clr;
+                padding: 5px;
+                border-bottom: 4px solid $text-clr;
+                display: inline-block;
+            }
+        }
+
+        .quotes--controle {
+            @include flex(row, center, center);
+            font-size: 2rem;
+            gap: 2rem;
+            color: $text-clr;
+            .arrow {
+                cursor: pointer;
+                vertical-align: middle;
+                background: transparent;
+                color: $text-clr;
+            }
+            .move {
+                font-size: 1.5em;
+                color: $primary-clr;
+                font-weight: bold;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 650px) {
+    .quote--container {
+        padding: 3rem 2rem 1rem !important;
+
+        .quote--text {
+            margin-bottom: 2rem !important;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import "variables";
+@import "mixins";
+
+.about--content {
+    @include flex(row, center, stretch);
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 3rem;
+
+    .about--item {
+        max-width: 300px;
+
+        .about--img {
+            width: 100%;
+            display: block;
+        }
+        .about--title {
+            color: $primary-clr;
+            font-size: 1.4rem;
+            margin-bottom: 1em;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+        .about--subtitle {
+            color: $text-clr;
+            line-height: 1.2;
+            margin-bottom: 0.8em;
+            font-size: 0.8rem;
+        }
+        .about--link {
+            color: $link-clr;
+            font-weight: 500;
+        }
+    }
+}

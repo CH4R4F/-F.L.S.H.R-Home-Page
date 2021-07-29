@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="CMarghin" />
+        <link rel="shortcut icon" href="./images/eds.png" type="image/x-icon" />
+        <link rel="icon" href="./images/eds.png" sizes="25x25" type="image/x-icon" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet" />
+        <title>EDS || Home Page</title>
+        <link rel="stylesheet" href="./styles/main.css" />
+    </head>
+    <body>
+        <!-- header section  -->
+        <header>
+            <nav>
+                <ul class="nav--links right">
+                    <li class="hidden"><a href="#hero" class="nav--links--item hidden active">Home</a></li>
+                    <li class="hidden"><a href="#about" class="nav--links--item hidden">About Us</a></li>
+                    <li class="hidden">
+                        <a href="#debating" class="nav--links--item hidden"> Debating Evenings & Membership </a>
+                    </li>
+                    <li class="hidden"><a href="#quote" class="nav--links--item hidden">Quotes</a></li>
+                    <li class="hidden"><a href="#community" class="nav--links--item hidden">Community</a></li>
+                    <li><a href="#donate" class="nav--links--item donate">Donate</a></li>
+                </ul>
+
+                <div class="burger">
+                    <span class="burger--line1 line"></span>
+                    <span class="burger--line2 line"></span>
+                    <span class="burger--line3 line"></span>
+                </div>
+            </nav>
+            <div class="overlay"></div>
+        </header>
+
+        <main>
+            <!-- hero section  -->
+            <div class="hero--wrapper">
+                <div class="social-media-icons absolute">
+                    <a href="https://www.instagram.com/flshrdebatesociety/" target="_blank" class="icon">
+                        <img src="./images/icons/instagram.png" alt="" />
+                    </a>
+                    <a href="https://www.facebook.com/flshrdebatesociety" target="_blank" class="icon"><img src="./images/icons/facebook.png" alt="" /></a>
+                    <a href="https://discord.gg/bxbpV4fcws" target="_blank" class="icon"><img src="./images/icons/discord.png" alt="" /></a>
+                </div>
+                <section id="hero" class="hero">
+                    <div class="hero--content">
+                        <div class="logo">
+                            <img src="./images/logo.png" />
+                        </div>
+                        <div class="content">
+                            <h1 class="hero--title">Welcome to F.L.S.H.R English Debating Society</h1>
+                            <p class="hero--subtitle">
+                                We believe that debating is a fantastic opportunity for skills development, a brilliant way to engage in constructive discussion on topical issues and above all - a lot
+                                of fun!
+                            </p>
+                            <button class="btn hero--btn">JOIN US</button>
+                        </div>
+                    </div>
+
+                    <div class="form--container hide-top">
+                        <div class="exit">
+                            <p>&times;</p>
+                        </div>
+                        <div class="form--title">
+                            <img src="./images/logo.png" alt="" />
+                            <h2>F.L.S.H.R English Debating Society Membership Registration.</h2>
+                        </div>
+                        <form action="">
+                            <ul class="form--list">
+                                <li>
+                                    <label for="full-name"> Your name </label>
+                                    <input type="text" name="full-name" id="full-name" required placeholder="Full name" />
+                                </li>
+                                <li>
+                                    <label for="phone"> Your phone number </label>
+                                    <input type="tel" name="phone-number" id="phone" placeholder="+212xxxxxxxxx" required />
+                                </li>
+
+                                <li>
+                                    <label for="email"> Your E-mail </label>
+                                    <input type="email" name="email" id="email" required placeholder="example@example.exp" />
+                                </li>
+                                <li>
+                                    <label for="apogee"> Your apogee number </label>
+                                    <input type="number" id="apogee" required placeholder="xxxxxxxxxx" />
+                                </li>
+                                <li>
+                                    <label for="experience"> If you have debating experience please describe it below. If not, no worries! </label>
+                                    <textarea id="experience" cols="20" rows="4" placeholder="(Optional)"></textarea>
+                                </li>
+                            </ul>
+                            <input type="submit" value="Submit" class="btn sub" />
+
+                            <p class="hint">Please note that you must sign-up using your Educational Email address (@um5.ac.ma) to verify that you are a FLSHR student.</p>
+                        </form>
+                    </div>
+                    <div class="input-overlay"></div>
+
+                    <!-- <div class="submitted-popup">
+                        <div class="submitted--title">
+                            <img src="./images/logo.png" alt="" />
+                            <h2>F.L.S.H.R English Debating Society Membership Registration.</h2>
+                        </div>
+                        <h2>&bull; Registration Submitted &bull;</h2>
+
+                        <div class="popup-btns">
+                            <button class="back btn sub">Home Page</button>
+                            <button class="btn discord">
+                                <a href="https://discord.gg/bxbpV4fcws" target="_blank">
+                                    <img src="./images/icons/discord.png" alt="" />
+                                    <span>JOIN DISCORD</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div> -->
+
+                    <span class="fancy__circles hero--c-1"></span>
+                    <span class="fancy__circles hero--c-2"></span>
+                    <div class="dottes">
+                        <img src="./images/dottes.png" alt="" />
+                    </div>
+                </section>
+            </div>
+
+            <!-- summary section  -->
+            <section id="about" class="about">
+                <div class="section--title about--title">
+                    <h2>A Summary about the Club</h2>
+                </div>
+                <div class="about--content">
+                    <!-- our Club  -->
+                    <div class="about--item">
+                        <div class="about--img">
+                            <img src="./images/about--us-1.png" alt="" loading="lazy" />
+                        </div>
+                        <div class="about--description">
+                            <h3 class="about--title">Our Club</h3>
+                            <p class="about--subtitle">Our main activity is debating. If you don't know what are we talking about...</p>
+                            <p><a href="" class="about--link">Learn More &gt;</a></p>
+                        </div>
+                    </div>
+
+                    <!-- club Goal -->
+                    <div class="about--item">
+                        <div class="about--img">
+                            <img src="./images/about--us-2.png" alt="" loading="lazy" />
+                        </div>
+                        <div class="about--description">
+                            <h3 class="about--title">club goal</h3>
+                            <p class="about--subtitle">As a society, our general aims are threefold : First is To create a political...</p>
+                            <p><a href="" class="about--link">Learn More &gt;</a></p>
+                        </div>
+                    </div>
+
+                    <!-- club activities  -->
+                    <div class="about--item">
+                        <div class="about--img">
+                            <img src="./images/about--us-3.png" alt="" loading="lazy" />
+                        </div>
+                        <div class="about--description">
+                            <h3 class="about--title">club activities</h3>
+                            <p class="about--subtitle">During term-time we run a weekly workshop where we use debating as a..</p>
+                            <p><a href="" class="about--link">Learn More &gt;</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- debating section  -->
+            <section id="debating" class="debating">
+                <div class="debating--container">
+                    <div class="debate--evenings debate--item">
+                        <div class="img">
+                            <img src="./images/politic.png" alt="" />
+                            <span class="fancy__circles d--eve--c-1"></span>
+                            <span class="fancy__circles d--eve--c-2"></span>
+                        </div>
+                        <div class="debate--content">
+                            <h2 class="section--title debate--title">debate evenings</h2>
+                            <p class="debate--text">
+                                WooCommerce is developer friendly, too. Built with a REST API, WooCommerce is scalable and can integrate with virtually any service. Design a complex store from
+                                scratch, extend a store for a client, or simply add a single product to a WordPress site—your store, your way.
+                            </p>
+                            <button class="btn debate--btn">Read more</button>
+                        </div>
+                    </div>
+                    <div class="debate--membership debate--item">
+                        <div class="img">
+                            <img src="./images/membership.png" alt="" />
+                            <span class="fancy__circles d--mem--c-1"></span>
+                            <span class="fancy__circles d--mem--c-2"></span>
+                        </div>
+                        <div class="debate--content">
+                            <h2 class="section--title debate--title">membership</h2>
+                            <p class="debate--text">
+                                WooCommerce is one of the fastest-growing eCommerce communities. We’re proud that the helpfulness of the community and a wealth of online resources are frequently cited
+                                as reasons our users love it. There are 80+ meetups worldwide!
+                            </p>
+                            <button class="btn debate--btn">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <span class="fancy__circles debate--c-1"></span>
+                <span class="fancy__circles debate--c-2"></span>
+            </section>
+
+            <!-- quotes section  -->
+            <section id="quote">
+                <div class="section--title">
+                    <h2>inspiring quotes</h2>
+                </div>
+                <div class="quote--wrapper">
+                    <div class="quote--container">
+                        <span class="fancy__circles quote--c-1"></span>
+                        <span class="fancy__circles quote--c-2"></span>
+                        <q class="quote--text"></q>
+                        <address class="author"></address>
+                    </div>
+                    <div class="quotes--controle">
+                        <button class="prev arrow">&LeftArrow;</button>
+                        <button class="next arrow move">&rightarrow;</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- join section  -->
+            <section class="join" id="community">
+                <span class="fancy__circles join--c-1"></span>
+                <span class="fancy__circles join--c-2"></span>
+                <div class="join--top">
+                    <img src="./images/team.png" alt="" />
+                </div>
+                <div class="join--bottom">
+                    <div class="ready-to-debate">
+                        <h3 class="join--title">Ready to Debate ?</h3>
+                        <button class="btn discord">
+                            <a href="https://discord.gg/bxbpV4fcws" target="_blank">
+                                <img src="./images/icons/discord.png" alt="" />
+                                <span>JOIN DISCORD</span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer section  -->
+        <footer>
+            <div class="container">
+                <div class="social-media-footer">
+                    <a href="https://www.facebook.com/flshrdebatesociety" target="_blank" class="facebook">
+                        <img src="./images/icons/facebook.png" alt="" />
+                    </a>
+                    <a href="https://discord.gg/bxbpV4fcws" target="_blank" class="discord">
+                        <img src="./images/icons/discord.png" alt="" />
+                    </a>
+                    <a href="https://www.instagram.com/flshrdebatesociety/" target="_blank" class="instagram">
+                        <img src="./images/icons/instagram.png" alt="" />
+                    </a>
+                </div>
+                <span class="copyright">
+                    COPYRIGHT F.L.S.H.R ENGLISH DEBATING SOCIEY <span class="year"></span> -
+                    <a href="">TERMS & CONDITIONS</a>
+                    <a href="">PRIVACY POLICY</a>
+                </span>
+            </div>
+        </footer>
+        <script src="./Js/index.js"></script>
+    </body>
+</html>
